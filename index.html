@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Полимерные и промышленные полы в Краснодаре — от 899 ₽/м². Шлифовка и полировка бетона, декоративные покрытия под мрамор. Протектпол, с 2011 года.">
+<title>Протектпол Демо</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: full-bleed bands; the three marble "liquids" (white-black, white-brown, mica) are WebGL backgrounds for hero, decorative and contacts; graphite/concrete bands between them; yellow road-marking accent for CTAs. Dark-first. */
+:root{
+  --bg:#17191D;--bg2:#1F2328;--bg3:#272C33;
+  --fg:#F1F2F4;--fg2:#B7BDC6;--muted:#7E8792;
+  --line:rgba(255,255,255,.1);
+  --acc:#FFC21A;--acc-fg:#1B1708;--acc-text:#FFC21A;
+  --card:rgba(255,255,255,.05);
+  --pearl:#C9B79C;
+  --font-d:"Unbounded","Manrope",system-ui,sans-serif;
+  --font-b:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#F3F3F1;--bg2:#FFFFFF;--bg3:#ECEDEF;
+  --fg:#1B1E23;--fg2:#4C535C;--muted:#7E8792;
+  --line:rgba(20,24,30,.12);
+  --acc:#F2B300;--acc-fg:#1B1708;--acc-text:#8A6200;
+  --card:rgba(20,24,30,.04);
+  color-scheme:light;
+}}
+:root[data-theme="light"]{
+  --bg:#F3F3F1;--bg2:#FFFFFF;--bg3:#ECEDEF;
+  --fg:#1B1E23;--fg2:#4C535C;--muted:#7E8792;
+  --line:rgba(20,24,30,.12);
+  --acc:#F2B300;--acc-fg:#1B1708;--acc-text:#8A6200;
+  --card:rgba(20,24,30,.04);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-b);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+h1,h2,h3{font-family:var(--font-d);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(28px,4.3vw,56px);font-weight:800}
+h2{font-size:clamp(24px,3.4vw,40px);font-weight:700}
+h3{font-size:18px;font-weight:600;font-family:var(--font-b);font-weight:800}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{position:relative;padding-block:clamp(56px,8vw,110px)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--acc)}
+.lead{font-size:18px;color:var(--fg2);max-width:62ch}
+.sec-head{display:grid;gap:14px;max-width:760px;margin-bottom:clamp(28px,4vw,48px)}
+
+/* marble liquid canvases */
+.liquid{position:absolute;inset:0;overflow:hidden;z-index:0}
+.liquid canvas{width:100%;height:100%;display:block}
+.liquid .veil{position:absolute;inset:0}
+.band>.wrap{position:relative;z-index:1}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font-family:var(--font-d);font-weight:800;font-size:17px;letter-spacing:.02em;display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo i{width:26px;height:26px;background:var(--acc);display:inline-block;clip-path:polygon(0 100%,0 35%,50% 0,100% 35%,100% 100%,65% 100%,65% 60%,35% 60%,35% 100%)}
+.menu{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:14px}
+.menu a{text-decoration:none;color:var(--fg2)}
+.menu a:hover{color:var(--fg)}
+.phone{font-weight:800;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:6px;font-weight:800;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:var(--font-b);transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[role=slider]:focus-visible{outline:3px solid var(--acc-text);outline-offset:2px}
+.btn-acc{background:var(--acc);color:var(--acc-fg)}
+.btn-ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn-dark{background:#1F2328;color:#F1F2F4}
+.btn-sm{padding:10px 16px;font-size:14px;white-space:nowrap}
+.burger{display:none;width:44px;height:44px;flex:none;place-items:center;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--fg);cursor:pointer}
+.burger i,.burger i::before,.burger i::after{content:"";display:block;width:18px;height:2px;background:currentColor;transition:transform .2s}
+.burger i{position:relative}
+.burger i::before{position:absolute;top:-6px}.burger i::after{position:absolute;top:6px}
+.burger[aria-expanded="true"] i{background:transparent}
+.burger[aria-expanded="true"] i::before{transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] i::after{transform:translateY(-6px) rotate(-45deg)}
+.menu-phone{display:none}
+/* меню a scomparsa: sotto 1120px le voci non entrano più accanto a telefono e CTA */
+@media (max-width:1120px){
+  .burger{display:grid}
+  .phone{margin-left:auto}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;margin:0;padding:8px max(16px,env(safe-area-inset-left,0px)) 16px;background:var(--bg2);border-bottom:1px solid var(--line);box-shadow:0 20px 30px -20px rgba(0,0,0,.5);font-size:16px}
+  .menu.open{display:flex}
+  .menu a{padding:12px 0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:860px){.nav{gap:12px}.nav .btn{display:none}}
+@media (max-width:520px){.phone{display:none}.logo{margin-right:auto}.menu .menu-phone{display:block;font-weight:800;color:var(--fg)}}
+
+/* hero (white-black marble) */
+.hero,.deco{--acc-text:#7A5C00}
+.hero-card,.contact,footer{--acc-text:#FFC21A}
+.hero{color:#15181C;padding-block:clamp(70px,10vw,140px) clamp(60px,8vw,110px)}
+.hero .veil{background:linear-gradient(90deg,rgba(236,237,239,.92) 0%,rgba(236,237,239,.78) 45%,rgba(236,237,239,.25) 100%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:end}
+.hero-copy{display:grid;gap:22px;max-width:640px}
+.hero .eyebrow{color:#7A5C00}.hero .eyebrow::before{background:#E0A800}
+.hero .lead{color:#3A3F47}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;font-weight:600;color:#2A2F36}
+.trust span{display:flex;gap:8px;align-items:center}
+.trust span::before{content:"";width:8px;height:8px;background:#E0A800;transform:rotate(45deg)}
+.hero-card{background:rgba(23,25,29,.92);color:#F1F2F4;border-radius:10px;padding:26px;display:grid;gap:16px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.hero-card .big{font-family:var(--font-d);font-size:clamp(34px,4vw,48px);font-weight:800;color:var(--acc);line-height:1}
+.hero-card small{color:#B7BDC6;font-size:14px}
+.hero-card ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px;color:#D5D9DF}
+.hero-card li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(255,255,255,.12);padding-bottom:8px}
+.hero-card li b{font-variant-numeric:tabular-nums;color:#fff}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero .veil{background:linear-gradient(180deg,rgba(236,237,239,.94) 0%,rgba(236,237,239,.88) 70%,rgba(236,237,239,.6) 100%)}}
+
+/* numbers bar */
+.stats{background:var(--bg2);border-block:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.stat{padding:26px 18px;border-right:1px solid var(--line);display:grid;gap:4px}
+.stat:last-child{border-right:0}
+.stat b{font-family:var(--font-d);font-size:clamp(24px,3vw,34px);font-weight:800;color:var(--acc-text);font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--fg2)}
+@media (max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:980px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.grid3{grid-template-columns:1fr}}
+.svc{background:var(--bg2);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-width:0}
+.svc .pic{height:150px;position:relative;background:var(--bg3)}
+.svc .pic canvas{width:100%;height:100%;display:block}
+.svc .pic .tag{position:absolute;left:14px;bottom:12px;background:var(--acc);color:var(--acc-fg);font-weight:800;font-size:12px;padding:5px 9px;border-radius:4px;letter-spacing:.04em}
+.svc .body{padding:18px 18px 20px;display:grid;gap:10px;align-content:start}
+.svc p{color:var(--fg2);font-size:14.5px}
+.svc .price{font-weight:800;font-variant-numeric:tabular-nums;color:var(--fg)}
+.svc .price small{color:var(--muted);font-weight:600}
+.svc a{font-weight:700;font-size:14px;color:var(--acc-text);text-decoration:none;margin-top:auto}
+
+/* industries */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--line);background:var(--card);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px}
+
+/* calculator */
+.calc{background:var(--bg2);border:1px solid var(--line);border-radius:12px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+.calc-form{padding:clamp(20px,3vw,36px);display:grid;gap:20px;border-right:1px solid var(--line)}
+.calc-res{padding:clamp(20px,3vw,36px);background:var(--bg3);display:grid;gap:18px;align-content:start;border-radius:0 12px 12px 0}
+@media (max-width:900px){.calc{grid-template-columns:1fr}.calc-form{border-right:0;border-bottom:1px solid var(--line)}.calc-res{border-radius:0 0 12px 12px}}
+.field{display:grid;gap:8px}
+.field label{font-size:13px;font-weight:700;color:var(--fg2);text-transform:uppercase;letter-spacing:.08em}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1.5px solid var(--line);background:transparent;color:var(--fg);padding:9px 14px;border-radius:6px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit}
+.opt[aria-pressed="true"]{border-color:var(--acc-text);background:color-mix(in srgb,var(--acc) 14%,transparent)}
+.range{display:grid;grid-template-columns:1fr 110px;gap:14px;align-items:center}
+input[type=range]{width:100%;accent-color:var(--acc)}
+input[type=number],input[type=text],input[type=tel],select,textarea{width:100%;background:var(--bg);border:1.5px solid var(--line);color:var(--fg);padding:11px 12px;border-radius:6px;font:inherit;font-variant-numeric:tabular-nums}
+.res-big{font-family:var(--font-d);font-size:clamp(30px,4vw,44px);font-weight:800;color:var(--acc-text);line-height:1;font-variant-numeric:tabular-nums}
+.res-sum{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.res-note{font-size:13px;color:var(--fg2)}
+.res-lines{display:grid;gap:6px;font-size:14px;color:var(--fg2)}
+.res-lines div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.res-lines b{color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap}
+.msgs{display:flex;flex-wrap:wrap;gap:10px}
+.msg{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:6px;font-weight:700;font-size:14px;text-decoration:none;border:1.5px solid var(--line)}
+.msg i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:980px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.why{grid-template-columns:1fr}}
+.why div{border-top:3px solid var(--acc);padding-top:14px;display:grid;gap:8px}
+.why b{font-size:16px}
+.why p{font-size:14px;color:var(--fg2)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:s}
+@media (max-width:980px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:8px;position:relative}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--font-d);font-weight:800;color:var(--acc-text);font-size:22px}
+.step b{font-size:15px}
+.step p{font-size:14px;color:var(--fg2)}
+
+/* decorative (white-brown marble) */
+.deco{color:#2B2219}
+.deco .veil{background:linear-gradient(180deg,rgba(242,235,225,.55),rgba(242,235,225,.25) 50%,rgba(242,235,225,.7))}
+.deco .eyebrow{color:#7E5A2F}.deco .eyebrow::before{background:#9A6E42}
+.deco .lead{color:#4A3B2C}
+.deco-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:center}
+@media (max-width:860px){.deco-grid{grid-template-columns:1fr}}
+.swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.sw{aspect-ratio:1/1.15;max-width:100%;border-radius:8px;overflow:hidden;position:relative;box-shadow:0 20px 40px -18px rgba(40,25,10,.5)}
+.sw canvas{width:100%;height:100%;display:block}
+.sw span{position:absolute;left:10px;right:10px;width:fit-content;bottom:10px;background:rgba(27,23,18,.78);color:#F3EDE4;font-size:12px;font-weight:700;padding:5px 8px;border-radius:4px}
+.deco .btn-dark{background:#2B2219}
+
+/* portfolio */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:980px){.cases{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.cases{grid-template-columns:1fr}}
+.case{background:var(--bg2);border:1px solid var(--line);border-radius:8px;overflow:hidden;min-width:0}
+.ba{position:relative;height:190px;background:var(--bg3);overflow:hidden;cursor:ew-resize;user-select:none;touch-action:pan-y}
+.ba .before,.ba .after{position:absolute;inset:0}
+.ba .before{background:
+  repeating-linear-gradient(115deg,rgba(0,0,0,.08) 0 6px,transparent 6px 14px),
+  radial-gradient(circle at 30% 40%,#6B6E72,#4A4D52 60%,#3A3D42);}
+.ba .after{background:linear-gradient(135deg,#2E3A4F,#3F5775 45%,#2A3447);clip-path:inset(0 0 0 var(--x,50%))}
+.ba .after::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.18) 48%,transparent 60%)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;background:var(--acc);transform:translateX(-1px)}
+.ba .handle::after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:var(--acc);color:var(--acc-fg);display:grid;place-items:center;font-weight:800;font-size:15px}
+.ba .lbl{position:absolute;top:10px;font-size:11px;font-weight:800;letter-spacing:.08em;padding:4px 7px;border-radius:3px;background:rgba(0,0,0,.55);color:#fff}
+.ba .lbl.l{left:10px}.ba .lbl.r{right:10px}
+.case .body{padding:16px 18px 18px;display:grid;gap:6px}
+.case b{font-size:15px}
+.case .meta{font-size:13px;color:var(--fg2);display:flex;flex-wrap:wrap;gap:6px 14px;font-variant-numeric:tabular-nums}
+
+/* prices */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg2)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:14px}
+th,td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal;min-width:260px;font-weight:600}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg2);background:var(--bg3)}
+tr:last-child td{border-bottom:0}
+td.hl,th.hl{background:color-mix(in srgb,var(--acc) 16%,transparent);color:var(--fg);font-weight:800}
+.disc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+@media (max-width:760px){.disc{grid-template-columns:1fr 1fr}}
+.disc div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:2px}
+.disc b{font-family:var(--font-d);font-size:22px;color:var(--acc-text)}
+.disc span{font-size:13px;color:var(--fg2)}
+
+/* faq */
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--font-d);color:var(--acc-text);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding-bottom:18px;color:var(--fg2);max-width:70ch}
+
+/* contacts (mica marble) */
+.contact{color:#F4F7F6}
+.contact .veil{background:linear-gradient(180deg,rgba(14,32,34,.78),rgba(14,32,34,.55) 50%,rgba(14,32,34,.85))}
+.contact .eyebrow{color:#F0C76A}.contact .eyebrow::before{background:#F0C76A}
+.contact .lead{color:#D6E2DF}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.addr{display:grid;gap:18px}
+.addr .block{display:grid;gap:4px;border-left:3px solid #F0C76A;padding-left:14px}
+.addr .block small{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#C7D4D0;font-weight:700}
+.addr .block b{font-size:17px}
+.addr .block span{color:#D6E2DF;font-size:14.5px}
+.copy{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;padding:5px 10px;border-radius:4px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;margin-left:8px}
+.form{background:rgba(23,25,29,.88);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:clamp(20px,3vw,32px);display:grid;gap:14px;color:#F1F2F4;backdrop-filter:blur(6px)}
+.form h3{font-family:var(--font-d);font-size:20px;font-weight:700}
+.form .field label{color:#B7BDC6}
+.form input,.form select,.form textarea{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:#fff}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.form .two{grid-template-columns:1fr}}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#C9D0D8}
+.chk input{margin-top:3px;accent-color:var(--acc)}
+.chk a{color:#F0C76A}
+.ok{display:none;background:rgba(255,194,26,.15);border:1px solid rgba(255,194,26,.5);padding:12px;border-radius:6px;font-weight:700}
+.ok.show{display:block}
+
+footer{background:#0F1114;color:#B7BDC6;padding-block:36px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+footer .logo{color:#fff}
+footer a{color:#D5D9DF}
+.legal{font-size:12px;color:#7E8792;margin-top:8px}
+
+/* floating messengers */
+.float{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:grid;gap:8px}
+.fab{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;text-decoration:none;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.6)}
+.fab.wa{background:#25D366}.fab.tg{background:#2AABEE}.fab.ph{background:var(--acc);color:var(--acc-fg)}
+.fab span{display:none}
+/* su telefono: barra fissa in basso invece dei tre cerchi sopra al contenuto */
+@media (max-width:760px){
+  body{padding-bottom:calc(62px + env(safe-area-inset-bottom,0px))}
+  .float{left:0;right:0;bottom:0;grid-auto-flow:column;grid-template-columns:1.3fr 1fr 1fr;padding:8px max(12px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+  .fab{width:auto;height:46px;border-radius:6px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:14px;box-shadow:none}
+  .fab.ph{order:-1}
+  .fab b{display:none}.fab.ph b{display:inline}
+  .fab span{display:inline}
+}
+
+.reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  .reveal{transform:translateY(12px);transition:transform .7s ease}
+  .reveal.in{transform:none}
+}
+.demo-note{position:fixed;left:calc(12px + env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--acc);color:var(--acc-fg);padding:5px 9px;border-radius:4px}
+@media (max-width:760px){.demo-note{bottom:calc(70px + env(safe-area-inset-bottom,0px))}}
+</style>
+
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><i></i>ПРОТЕКТПОЛ</a>
+    <nav class="menu" id="menu" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#deco">Декор</a>
+      <a href="#cases">Объекты</a>
+      <a href="#prices">Цены</a>
+      <a href="#contacts">Контакты</a>
+      <a class="menu-phone" href="tel:+79186829187">+7 (918) 682-91-87</a>
+    </nav>
+    <a class="phone" href="tel:+79186829187">+7 (918) 682-91-87</a>
+    <a class="btn btn-acc btn-sm" href="#calc">Рассчитать стоимость</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Меню"><i></i></button>
+  </div>
+</header>
+
+<section class="band hero" id="top">
+  <div class="liquid" data-liquid="whiteblack" data-scale="2.2"><canvas aria-hidden="true"></canvas><div class="veil"></div></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Краснодар · Адыгея · Ставрополь · с 2011 года</div>
+        <h1>Полимерные и промышленные полы — без остановки вашего производства</h1>
+        <p class="lead">Монтаж и ремонт наливных, полиуретановых и эпоксидных полов, шлифовка и полировка бетона, декоративные покрытия под мрамор. Прозрачные цены за м², договор и НДС.</p>
+        <div class="hero-cta">
+          <a class="btn btn-acc" href="#calc">Рассчитать стоимость за 1 минуту</a>
+          <a class="btn btn-ghost" href="#contacts">Вызвать технолога на объект</a>
+        </div>
+        <div class="trust">
+          <span>Беспыльная шлифовка</span>
+          <span>Бесплатная диагностика основания</span>
+          <span>Гарантия на отрыв от основания</span>
+          <span>Работаем с НДС</span>
+        </div>
+      </div>
+      <aside class="hero-card reveal" aria-label="Цены на октябрь 2026">
+        <div><div class="big">от 899 ₽/м²</div><small>полимерный пол под ключ, площадь от 700 м² · цены на октябрь 2026</small></div>
+        <ul>
+          <li>Шлифовка бетона до 200 грит <b>от 350 ₽/м²</b></li>
+          <li>Полимерцементный пол 7–30 мм <b>от 300 ₽/м²</b></li>
+          <li>Кварценаполненный ПУ-пол <b>от 460 ₽/м²</b></li>
+          <li>Ремонт участка пола <b>1 смена</b></li>
+        </ul>
+        <a class="btn btn-acc btn-sm" href="#prices">Смотреть полный прайс</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b>15</b><span>лет на рынке, с 2011 года</span></div>
+    <div class="stat"><b>6</b><span>регионов: Краснодар, Адыгея, Ставрополь, Ростов, Крым, побережье</span></div>
+    <div class="stat"><b>899 ₽</b><span>за м² под ключ на больших площадях</span></div>
+    <div class="stat"><b>1 смена</b><span>на ремонт бетонного пола и швов</span></div>
+  </div>
+</div>
+
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Наши услуги</div>
+      <h2>Пол, который выдержит погрузчик, химию и годы эксплуатации</h2>
+      <p class="lead">Два направления: промышленные полы для складов, производств и автомоек — и декоративные покрытия под камень для жилья, кафе и офисов.</p>
+    </div>
+    <div class="grid3">
+      <article class="svc reveal"><div class="pic" data-mini="poly"><canvas aria-hidden="true"></canvas><span class="tag">ЭПОКСИД · ПУ · ММА</span></div>
+        <div class="body"><h3>Полимерные наливные полы</h3><p>Бесшовные системы толщиной 2,5–3 мм, любой цвет по RAL, стойкость к УФ, химии и мойке.</p><div class="price">от 899 ₽/м² <small>под ключ, от 700 м²</small></div><a href="#calc">Рассчитать →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="quartz"><canvas aria-hidden="true"></canvas><span class="tag">ПРОТИВОСКОЛЬЖЕНИЕ</span></div>
+        <div class="body"><h3>Полиуретановые полы</h3><p>Окрасочные и кварценаполненные покрытия для складов, паркингов и открытых площадок. Разметка в цвет.</p><div class="price">от 460 ₽/м² <small>работа, кварц ≤2 мм</small></div><a href="#calc">Рассчитать →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="cement"><canvas aria-hidden="true"></canvas><span class="tag">7–30 ММ · B50</span></div>
+        <div class="body"><h3>Полимерцементные полы</h3><p>Выдерживают даже гусеничную технику. Эксплуатация с 7-го дня, дальнейшая обработка не нужна.</p><div class="price">от 300 ₽/м² <small>работа</small></div><a href="#calc">Рассчитать →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="polish"><canvas aria-hidden="true"></canvas><span class="tag">АЛМАЗ · 200 ГРИТ</span></div>
+        <div class="body"><h3>Полированный бетон</h3><p>Глубокая шлифовка алмазными фрезами, пропитки и тонеры. Износостойкость как у гранита, минимум ухода.</p><div class="price">от 350 ₽/м² <small>шлифовка до 200 грит</small></div><a href="#calc">Рассчитать →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="repair"><canvas aria-hidden="true"></canvas><span class="tag">ЗА 1 СМЕНУ</span></div>
+        <div class="body"><h3>Ремонт бетонного пола и топпинга</h3><p>Пылит, трещит, крошится? Восстановим без новой стяжки: шлифовка, полимерные составы, ремонт швов.</p><div class="price">от 220 ₽/м.п. <small>швы, с материалом</small></div><a href="#calc">Рассчитать →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="dust"><canvas aria-hidden="true"></canvas><span class="tag">ЛИТИЙ · ПУ</span></div>
+        <div class="body"><h3>Обеспыливание и пропитки</h3><p>Литиевые и полиуретановые пропитки укрепляют бетон и убирают пыль. Работаем участками, не останавливая предприятие.</p><div class="price">от 40 ₽/м² <small>литиевая пропитка, без материала</small></div><a href="#calc">Рассчитать →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="wash"><canvas aria-hidden="true"></canvas><span class="tag">АВТОМОЙКИ</span></div>
+        <div class="body"><h3>Полы для автомоек</h3><p>Защита и ремонт полов постов мойки: стойкость к воде, химии и абразиву, уклоны к трапам.</p><div class="price">по смете <small>после осмотра</small></div><a href="#contacts">Вызвать технолога →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="water"><canvas aria-hidden="true"></canvas><span class="tag">ГИДРОИЗОЛЯЦИЯ</span></div>
+        <div class="body"><h3>Гидроизоляция</h3><p>Фундаменты, подвалы, бассейны — сухо и надолго. Подбираем систему под давление воды и основание.</p><div class="price">по смете <small>после осмотра</small></div><a href="#contacts">Вызвать технолога →</a></div></article>
+      <article class="svc reveal"><div class="pic" data-mini="marble"><canvas aria-hidden="true"></canvas><span class="tag">ПОД МРАМОР</span></div>
+        <div class="body"><h3>Декоративные полы и столешницы</h3><p>Эпоксидная смола, перламутровые пигменты с металл-эффектом, флоки и чипсы. Тёплый бесшовный «камень».</p><div class="price">от 1 990 ₽/м² <small>с материалом</small></div><a href="#deco">Смотреть образцы →</a></div></article>
+    </div>
+    <div style="margin-top:28px;display:grid;gap:12px" class="reveal">
+      <div class="eyebrow">Для кого</div>
+      <div class="chips"><span class="chip">Склады и логистика</span><span class="chip">Пищевые производства</span><span class="chip">Автосервисы и мойки</span><span class="chip">Паркинги</span><span class="chip">Торговля и HoReCa</span><span class="chip">Дома и квартиры</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="calc" style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Калькулятор</div>
+      <h2>Рассчитайте стоимость пола за 1 минуту</h2>
+      <p class="lead">Расчёт по нашему действующему прайсу: чем больше площадь, тем ниже цена за м². Точную смету подготовит технолог после осмотра основания.</p>
+    </div>
+    <div class="calc reveal">
+      <div class="calc-form">
+        <div class="field"><label>Тип объекта</label>
+          <div class="opts" id="objType">
+            <button class="opt" aria-pressed="true" data-v="склад">Склад</button><button class="opt" aria-pressed="false" data-v="производство">Производство</button><button class="opt" aria-pressed="false" data-v="автомойка">Автомойка</button><button class="opt" aria-pressed="false" data-v="паркинг">Паркинг</button><button class="opt" aria-pressed="false" data-v="магазин, кафе">Магазин, кафе</button><button class="opt" aria-pressed="false" data-v="дом, квартира">Дом, квартира</button>
+          </div></div>
+        <div class="field"><label for="area">Площадь, м²</label>
+          <div class="range"><input type="range" id="areaRange" min="20" max="3000" step="10" value="450"><input type="number" id="area" min="20" max="20000" value="450"></div></div>
+        <div class="field"><label>Покрытие</label>
+          <div class="opts" id="cover">
+            <button class="opt" aria-pressed="true" data-v="poly">Полимерный наливной</button><button class="opt" aria-pressed="false" data-v="quartz">Кварценаполненный ПУ</button><button class="opt" aria-pressed="false" data-v="cement">Полимерцементный</button><button class="opt" aria-pressed="false" data-v="polish">Полировка бетона</button><button class="opt" aria-pressed="false" data-v="impreg">Пропитка / обеспыливание</button><button class="opt" aria-pressed="false" data-v="deco">Декоративный под мрамор</button>
+          </div></div>
+        <div class="field"><label>Состояние основания</label>
+          <div class="opts" id="base">
+            <button class="opt" aria-pressed="true" data-v="new">Новый бетон</button><button class="opt" aria-pressed="false" data-v="dust">Старый, пылит</button><button class="opt" aria-pressed="false" data-v="crack">Трещины и сколы</button>
+          </div></div>
+      </div>
+      <div class="calc-res" aria-live="polite">
+        <div class="eyebrow">Ориентировочно</div>
+        <div class="res-big" id="resPer">от 0 ₽/м²</div>
+        <div class="res-sum" id="resSum">итого от 0 ₽</div>
+        <div class="res-lines" id="resLines"></div>
+        <p class="res-note" id="resNote">Цены без НДС, для бетона М300. Смета уточняется после бесплатной диагностики основания.</p>
+        <div class="msgs">
+          <a class="msg" id="calcWa" href="https://wa.me/79186829187" target="_blank" rel="noopener"><i style="background:#25D366"></i>Отправить в WhatsApp</a>
+          <a class="msg" id="calcTg" href="https://t.me/+79186829187" target="_blank" rel="noopener"><i style="background:#2AABEE"></i><span>В Telegram</span></a>
+          <a class="msg" id="calcLead" href="#contacts"><i style="background:var(--acc)"></i>Получить смету</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Почему мы</div>
+      <h2>Инженерный подход к полу</h2>
+    </div>
+    <div class="why reveal">
+      <div><b>Без пыли и без остановки бизнеса</b><p>Шлифовальные машины с циклонными пылесосами. Работаем участками, пока предприятие работает.</p></div>
+      <div><b>Прозрачные цены</b><p>Прайс по площади открыт на сайте. Чем больше объект, тем ниже цена за м².</p></div>
+      <div><b>Собственное оборудование</b><p>Алмазные фрезы, пылесосы, смесители. Не зависим от аренды и сроков подрядчиков.</p></div>
+      <div><b>Образцы до начала работ</b><p>Делаем выкрас или образец покрытия, чтобы вы видели результат заранее.</p></div>
+      <div><b>Договор, НДС, гарантия</b><p>Закрывающие документы и гарантия на отрыв покрытия от основания.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Пять шагов от заявки до сдачи объекта</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b>Заявка или расчёт</b><p>Звонок, мессенджер или калькулятор на сайте.</p></div>
+      <div class="step"><b>Выезд технолога</b><p>Бесплатная диагностика основания: прочность, влажность, уклоны.</p></div>
+      <div class="step"><b>Смета и образцы</b><p>Фиксируем цену, показываем выкрас покрытия.</p></div>
+      <div class="step"><b>Подготовка и монтаж</b><p>Шлифовка, ремонт, грунт, укладка системы. Участками или в ночные смены.</p></div>
+      <div class="step"><b>Сдача и уход</b><p>Акт, гарантия, рекомендации по эксплуатации.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band deco" id="deco">
+  <div class="liquid" data-liquid="whitebrown" data-scale="1.9"><canvas aria-hidden="true"></canvas><div class="veil"></div></div>
+  <div class="wrap">
+    <div class="deco-grid">
+      <div class="sec-head reveal" style="margin:0">
+        <div class="eyebrow">Декоративные покрытия</div>
+        <h2>Мать Земля создаёт эту красоту тысячи лет. Мы — за несколько смен</h2>
+        <p class="lead">Наливные полы, столешницы и подоконники под мрамор и гранит: прозрачная эпоксидная смола, перламутровые пигменты с металл-эффектом, флоки и чипсы. Без швов, тёплые на ощупь, дешевле натурального камня. Можно укладывать на тёплый пол.</p>
+        <div class="hero-cta"><a class="btn btn-dark" href="#contacts">Заказать образец покрытия</a><a class="btn btn-ghost" href="#calc">Рассчитать</a></div>
+      </div>
+      <div class="swatches reveal">
+        <div class="sw" data-liquid="whiteblack" data-scale="3.2"><canvas aria-hidden="true"></canvas><span>Бело-чёрный мрамор</span></div>
+        <div class="sw" data-liquid="whitebrown" data-scale="3.2"><canvas aria-hidden="true"></canvas><span>Бело-коричневый мрамор</span></div>
+        <div class="sw" data-liquid="mica" data-scale="3.2"><canvas aria-hidden="true"></canvas><span>Мрамор слюда</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="cases">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Объекты</div>
+      <h2>Было / стало</h2>
+      <p class="lead">Потяните ползунок. В рабочей версии сайта здесь будут реальные фото объектов с площадью, системой покрытия и сроками.</p>
+    </div>
+    <div class="cases reveal">
+      <article class="case"><div class="ba" style="--x:50%"><div class="before"></div><div class="after"></div><span class="lbl l">БЫЛО</span><span class="lbl r">СТАЛО</span><div class="handle"></div></div>
+        <div class="body"><b>Склад, Краснодар</b><div class="meta"><span>2 400 м²</span><span>полиуретан + кварц</span><span>9 смен</span></div></div></article>
+      <article class="case"><div class="ba" style="--x:50%"><div class="before"></div><div class="after" style="background:linear-gradient(135deg,#6E7278,#A9AEB4 45%,#7C8187)"></div><span class="lbl l">БЫЛО</span><span class="lbl r">СТАЛО</span><div class="handle"></div></div>
+        <div class="body"><b>Производство, Белореченск</b><div class="meta"><span>1 100 м²</span><span>полированный бетон, 200 грит</span><span>без остановки цеха</span></div></div></article>
+      <article class="case"><div class="ba" style="--x:50%"><div class="before"></div><div class="after" style="background:linear-gradient(135deg,#5B3A2E,#8C5A3C 45%,#4F3127)"></div><span class="lbl l">БЫЛО</span><span class="lbl r">СТАЛО</span><div class="handle"></div></div>
+        <div class="body"><b>Автомойка, Майкоп</b><div class="meta"><span>320 м²</span><span>ремонт топпинга + ПУ-покрытие</span><span>3 смены</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="prices" style="background:var(--bg3)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Цены на октябрь 2026</div>
+      <h2>Прайс по площади: чем больше объект, тем ниже цена</h2>
+      <p class="lead">Стоимость работ за м² без НДС, для бетона М300. Столбец подсвечивается по площади, выбранной в калькуляторе.</p>
+    </div>
+    <div class="tbl-wrap reveal">
+      <table id="priceTbl">
+        <thead><tr><th>Вид работ</th><th data-t="0">до 50 м²</th><th data-t="1">51–199</th><th data-t="2">200–499</th><th data-t="3">500–1499</th><th data-t="4">от 1500</th></tr></thead>
+        <tbody>
+          <tr><td>Затирка бетона (вертолёт, диск)</td><td>150</td><td>120</td><td>100</td><td>—</td><td>—</td></tr>
+          <tr><td>Шлифовка бетона до 50 грит</td><td>500</td><td>450</td><td>400</td><td>300</td><td>280</td></tr>
+          <tr><td>Шлифовка бетона до 200 грит</td><td>700</td><td>600</td><td>500</td><td>400</td><td>350</td></tr>
+          <tr><td>Полимерная шпатлёвка, с материалом</td><td>450</td><td>400</td><td>350</td><td>300</td><td>280</td></tr>
+          <tr><td>Уборка мусора циклонным пылесосом, с вывозом</td><td>—</td><td>100</td><td>90</td><td>70</td><td>40</td></tr>
+          <tr><td>Литиевая пропитка / гидрофобизация, без материала</td><td>120</td><td>100</td><td>90</td><td>50</td><td>40</td></tr>
+          <tr><td>ПУ-пропитка глянцевая, с материалом</td><td>500</td><td>450</td><td>400</td><td>320</td><td>290</td></tr>
+          <tr><td>Окрасочное ПУ-покрытие ≤1 мм, цвет по RAL</td><td>1 100</td><td>1 000</td><td>900</td><td>800</td><td>650</td></tr>
+          <tr><td>Кварценаполненный ПУ-пол ≤2 мм</td><td>900</td><td>830</td><td>760</td><td>590</td><td>460</td></tr>
+          <tr><td>Наливной ПУ / эпоксид / ММА 2,5–3 мм, без материала</td><td>700</td><td>450</td><td>350</td><td>300</td><td>—</td></tr>
+          <tr><td>Полимерцементный пол 7–30 мм, без материала</td><td>600</td><td>500</td><td>450</td><td>400</td><td>300</td></tr>
+          <tr><td>Ремонт швов, ₽/м.п., с материалом</td><td>300</td><td>250</td><td>220</td><td>—</td><td>—</td></tr>
+          <tr><td>Примыкания и труднодоступные места, ₽/м.п.</td><td>250</td><td>220</td><td>200</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="disc reveal">
+      <div><b>1 600 ₽</b><span>м² под ключ с материалом, малые площади</span></div>
+      <div><b data-disc="200">−10 %</b><span>к цене под ключ от 200 м²</span></div>
+      <div><b data-disc="500">−30 %</b><span>к цене под ключ от 500 м²</span></div>
+      <div><b>899 ₽</b><span>м² под ключ от 700 м²</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Вопросы и ответы</div><h2>Что спрашивают перед заказом</h2></div>
+    <div class="reveal">
+      <details open><summary>Можно ли залить полимерный пол на старый бетон?</summary><p>Да, после шлифовки и ремонта основания. Шлифовка снимает слабое «цементное молочко» и обеспечивает сцепление покрытия с бетоном.</p></details>
+      <details><summary>Исправит ли шлифовка неровный бетон?</summary><p>Нет: шлифовка не устраняет ошибки укладки. Фрезеровка и выравнивание по цене сопоставимы с новым слоем, поэтому оцениваем вариант на объекте.</p></details>
+      <details><summary>Нужно ли останавливать производство?</summary><p>Нет. Работаем участками, пыль удаляется циклонными пылесосами, возможны ночные смены и выходные.</p></details>
+      <details><summary>От чего зависит цена?</summary><p>От площади, типа покрытия и состояния бетона. Цены в прайсе указаны для бетона М300 без НДС.</p></details>
+      <details><summary>Через сколько можно эксплуатировать пол?</summary><p>Полимерцементные покрытия — с 7-го дня. Ремонт отдельных участков и швов — за одну рабочую смену.</p></details>
+      <details><summary>Работаете ли вы с НДС и по договору?</summary><p>Да. Договор, счёт, акты и закрывающие документы, гарантия на отрыв покрытия от основания.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contacts">
+  <div class="liquid" data-liquid="mica" data-scale="1.6"><canvas aria-hidden="true"></canvas><div class="veil"></div></div>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="addr reveal">
+        <div class="sec-head" style="margin:0"><div class="eyebrow">Контакты</div><h2>Вызовите технолога на объект</h2><p class="lead">Бесплатная диагностика основания в Краснодаре, Белореченске и по краю. Отвечаем в рабочие часы в течение 15 минут.</p></div>
+        <div class="block"><small>Телефон</small><b>+7 (918) 682-91-87 <button class="copy" data-copy="+79186829187">Копировать</button></b><span>Пн–Сб, 8:00–19:00</span></div>
+        <div class="block"><small>Почта</small><b>info@protektpol.ru <button class="copy" data-copy="info@protektpol.ru">Копировать</button></b></div>
+        <div class="block"><small>Краснодар</small><b>ул. Зиповская, 37</b><span>офис, встречи по договорённости</span></div>
+        <div class="block"><small>Белореченск</small><b>ул. Комсомольская, 199/1</b><span>база, склад материалов</span></div>
+        <div class="msgs"><a class="msg" href="https://wa.me/79186829187" target="_blank" rel="noopener" style="color:#fff;border-color:rgba(255,255,255,.3)"><i style="background:#25D366"></i>WhatsApp</a><a class="msg" href="https://t.me/+79186829187" target="_blank" rel="noopener" style="color:#fff;border-color:rgba(255,255,255,.3)"><i style="background:#2AABEE"></i>Telegram</a><a class="msg" href="https://dzen.ru/id/62abf0e9078622570760d9ca?tab=longs" target="_blank" rel="noopener" style="color:#fff;border-color:rgba(255,255,255,.3)"><i style="background:#F0C76A"></i>Видео работ в Дзен</a></div>
+      </div>
+      <form class="form reveal" id="leadForm" novalidate>
+        <h3>Получить смету</h3>
+        <div class="two">
+          <div class="field"><label for="fName">Имя</label><input type="text" id="fName" placeholder="Как к вам обращаться" required></div>
+          <div class="field"><label for="fPhone">Телефон</label><input type="tel" id="fPhone" placeholder="+7 (9__) ___-__-__" required></div>
+        </div>
+        <div class="field"><label for="fObj">Объект и площадь</label><input type="text" id="fObj" placeholder="Например: склад, 1200 м², Краснодар"></div>
+        <div class="field"><label for="fMsg">Комментарий</label><textarea id="fMsg" rows="3" placeholder="Состояние пола, сроки, удобное время звонка"></textarea></div>
+        <label class="chk"><input type="checkbox" id="c1" required><span>Я даю <a href="#">согласие на обработку персональных данных</a> (отдельный документ, 152-ФЗ)</span></label>
+        <label class="chk"><input type="checkbox" id="c2" required><span>Я ознакомлен с <a href="#">Политикой обработки персональных данных</a></span></label>
+        <button class="btn btn-acc" type="submit">Отправить заявку</button>
+        <div class="ok" id="okMsg">Заявка принята (демо). В рабочей версии она уйдёт на почту и в Telegram менеджера.</div>
+        <div id="errMsg" class="res-note" style="color:#F0C76A"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top"><i></i>ПРОТЕКТПОЛ</a>
+      <p style="margin-top:8px">Промышленные полы и декоративные покрытия с 2011 года. Краснодар, ул. Зиповская, 37 · Белореченск, ул. Комсомольская, 199/1 · +7 (918) 682-91-87</p>
+      <p class="legal">ООО «Протектпол» · ИНН/ОГРН: укажите данные · <a href="#">Политика обработки персональных данных</a> · <a href="#">Согласие на обработку</a></p>
+    </div>
+    <div style="display:grid;gap:6px;font-size:13px"><a href="#services">Услуги</a><a href="#prices">Цены</a><a href="#cases">Объекты</a><a href="#contacts">Контакты</a></div>
+  </div>
+</footer>
+
+<div class="float" aria-label="Быстрая связь">
+  <a class="fab wa" href="https://wa.me/79186829187" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp"><b>WA</b><span>WhatsApp</span></a>
+  <a class="fab tg" href="https://t.me/+79186829187" target="_blank" rel="noopener" title="Telegram" aria-label="Telegram"><b>TG</b><span>Telegram</span></a>
+  <a class="fab ph" href="tel:+79186829187" title="Позвонить: +7 (918) 682-91-87" aria-label="Позвонить: +7 (918) 682-91-87"><b>☎</b><span>Позвонить</span></a>
+</div>
+<div class="demo-note">Демо редизайна</div>
+
+<script>
+/* ---------- Liquid marble (WebGL) ---------- */
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  const FS = `precision highp float;
+uniform vec2 uRes;uniform float uT;uniform float uScale;uniform float uVeinW;uniform float uSeed;
+uniform vec3 uBase;uniform vec3 uAcc;uniform vec3 uVein;uniform vec3 uVein2;
+float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
+ return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);}
+float fbm(vec2 p){float v=0.,a=.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);
+ for(int i=0;i<6;i++){v+=a*noise(p);p=m*p;a*=.5;}return v;}
+void main(){
+ vec2 uv=gl_FragCoord.xy/uRes.y; uv=uv*uScale+uSeed;
+ float t=uT*.045;
+ vec2 q=vec2(fbm(uv+vec2(t*.6,t*.2)), fbm(uv+vec2(5.2,1.3)-t*.35));
+ vec2 r=vec2(fbm(uv+3.6*q+vec2(1.7,9.2)+t*.25), fbm(uv+3.6*q+vec2(8.3,2.8)-t*.2));
+ float f=fbm(uv+3.2*r);
+ float v1=pow(1.-abs(sin(f*9.4+r.x*4.)),uVeinW);
+ float v2=pow(1.-abs(sin(f*5.1-r.y*3.+1.7)),uVeinW*.6);
+ float cloud=smoothstep(.25,.85,f);
+ vec3 col=mix(uBase,uAcc,cloud);
+ col=mix(col,uVein2,v2*.55);
+ col=mix(col,uVein,v1*.95);
+ col+=(hash(gl_FragCoord.xy+uT)-.5)*.025;
+ gl_FragColor=vec4(col,1.);}`;
+  const c = (h)=>[parseInt(h.slice(1,3),16)/255,parseInt(h.slice(3,5),16)/255,parseInt(h.slice(5,7),16)/255];
+  const PAL = {
+    whiteblack:{base:c('#EEEFF1'),acc:c('#C7CBD0'),vein:c('#24282E'),vein2:c('#8B9096'),w:14},
+    whitebrown:{base:c('#F4EEE4'),acc:c('#DDC8A8'),vein:c('#8E6238'),vein2:c('#C8A57A'),w:12},
+    mica:{base:c('#86B4B3'),acc:c('#C8A260'),vein:c('#EEF5F1'),vein2:c('#3E6E72'),w:3.2}
+  };
+  function setup(host){
+    const cv = host.querySelector('canvas');
+    const gl = cv.getContext('webgl',{antialias:false,alpha:false,powerPreference:'low-power'});
+    if(!gl){ host.style.background = {whiteblack:'#DCDEE2',whitebrown:'#E9DDC9',mica:'#7FA7A8'}[host.dataset.liquid]; return; }
+    const mk=(t,s)=>{const sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);return sh;};
+    const pr=gl.createProgram();gl.attachShader(pr,mk(gl.VERTEX_SHADER,VS));gl.attachShader(pr,mk(gl.FRAGMENT_SHADER,FS));gl.linkProgram(pr);gl.useProgram(pr);
+    const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+    const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+    const U=n=>gl.getUniformLocation(pr,n);
+    const p=PAL[host.dataset.liquid]||PAL.whiteblack;
+    gl.uniform3fv(U('uBase'),p.base);gl.uniform3fv(U('uAcc'),p.acc);gl.uniform3fv(U('uVein'),p.vein);gl.uniform3fv(U('uVein2'),p.vein2);
+    gl.uniform1f(U('uVeinW'),p.w);gl.uniform1f(U('uScale'),parseFloat(host.dataset.scale||'2'));
+    gl.uniform1f(U('uSeed'),(Math.random()*10)|0);
+    const uRes=U('uRes'),uT=U('uT');
+    let w=0,h=0,visible=false,raf=0;const t0=performance.now()+Math.random()*4000;
+    function size(){const r=host.getBoundingClientRect();const s=Math.min(0.5,1/devicePixelRatio)*devicePixelRatio;
+      const nw=Math.max(1,Math.round(r.width*s)),nh=Math.max(1,Math.round(r.height*s));
+      if(nw!==w||nh!==h){w=nw;h=nh;cv.width=w;cv.height=h;gl.viewport(0,0,w,h);gl.uniform2f(uRes,w,h);} }
+    function draw(){size();gl.uniform1f(uT,(performance.now()-t0)/1000);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);}
+    function loop(){if(!visible)return;draw();raf=requestAnimationFrame(loop);}
+    new ResizeObserver(()=>{size();if(reduce)draw();}).observe(host);
+    new IntersectionObserver(e=>{visible=e[0].isIntersecting;if(visible){if(reduce)draw();else{cancelAnimationFrame(raf);loop();}}else cancelAnimationFrame(raf);},{rootMargin:'120px'}).observe(host);
+    draw();
+  }
+  document.querySelectorAll('[data-liquid]').forEach(setup);
+
+  /* service thumbnails: small canvases with material textures */
+  const MINI = {
+    poly:['#2B4C7E','#3F6EA8','#1E3558'], quartz:['#5C6B5A','#8A9A7C','#434F42'], cement:['#8A8F94','#B4B9BE','#6B7075'],
+    polish:['#A0A4A8','#D3D6D9','#7D8186'], repair:['#5A5D62','#7F8388','#3E4146'], dust:['#9A9E9A','#C2C6C0','#7A7E7A'],
+    wash:['#2E6D7A','#4FA3B0','#1F4A52'], water:['#1F3A5A','#2C5A86','#14263C'], marble:['#E9E2D6','#C8A57A','#8E6238']
+  };
+  document.querySelectorAll('[data-mini]').forEach(el=>{
+    const cv=el.querySelector('canvas');const k=el.dataset.mini;const col=MINI[k];const ctx=cv.getContext('2d');
+    const W=cv.width=320,H=cv.height=150;
+    const g=ctx.createLinearGradient(0,0,W,H);g.addColorStop(0,col[0]);g.addColorStop(.5,col[1]);g.addColorStop(1,col[2]);
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    let s=k.length*7;const rnd=()=>{s=(s*9301+49297)%233280;return s/233280;};
+    if(k==='quartz'||k==='dust'||k==='cement'){for(let i=0;i<1400;i++){ctx.fillStyle=`rgba(255,255,255,${rnd()*.35})`;ctx.fillRect(rnd()*W,rnd()*H,1.5,1.5);}}
+    if(k==='polish'||k==='poly'||k==='wash'||k==='water'){const r=ctx.createLinearGradient(0,0,W,H);r.addColorStop(.3,'rgba(255,255,255,0)');r.addColorStop(.48,'rgba(255,255,255,.35)');r.addColorStop(.6,'rgba(255,255,255,0)');ctx.fillStyle=r;ctx.fillRect(0,0,W,H);}
+    if(k==='repair'){ctx.strokeStyle='rgba(0,0,0,.45)';ctx.lineWidth=1.2;for(let i=0;i<6;i++){ctx.beginPath();let x=rnd()*W,y=rnd()*H;ctx.moveTo(x,y);for(let j=0;j<5;j++){x+=(rnd()-.5)*60;y+=(rnd()-.5)*40;ctx.lineTo(x,y);}ctx.stroke();}}
+    if(k==='marble'){ctx.strokeStyle='rgba(120,80,40,.5)';ctx.lineWidth=1;for(let i=0;i<10;i++){ctx.beginPath();let x=rnd()*W,y=rnd()*H;ctx.moveTo(x,y);for(let j=0;j<8;j++){x+=(rnd()-.5)*70;y+=(rnd()-.5)*50;ctx.lineTo(x,y);}ctx.stroke();}}
+    if(k==='cement'||k==='quartz'){ctx.strokeStyle='rgba(255,194,26,.9)';ctx.lineWidth=4;ctx.setLineDash([18,12]);ctx.beginPath();ctx.moveTo(0,H-26);ctx.lineTo(W,H-26);ctx.stroke();}
+  });
+})();
+
+/* ---------- Calculator ---------- */
+(function(){
+  const tier=a=>a<=50?0:a<=199?1:a<=499?2:a<=1499?3:4;
+  const T={grind50:[500,450,400,300,280],grind200:[700,600,500,400,350],putty:[450,400,350,300,280],lith:[120,100,90,50,40],pu:[500,450,400,320,290],
+    quartz:[900,830,760,590,460],cement:[600,500,450,400,300],deco:[2600,2400,2200,2100,1990]};
+  function turnkey(a){ if(a<=50)return 1600; if(a>=700)return 899; return Math.round(1600-(a-50)/(650)*(1600-899)); }
+  const state={obj:'склад',area:450,cover:'poly',base:'new'};
+  const fmt=n=>n.toLocaleString('ru-RU');
+  function calc(){
+    const a=state.area,t=tier(a),lines=[];let per=0;
+    if(state.cover==='poly'){per+=turnkey(a);lines.push(['Полимерный пол под ключ, с материалом',turnkey(a)]);}
+    if(state.cover==='quartz'){per+=T.quartz[t];lines.push(['Кварценаполненный ПУ-пол ≤2 мм, работа',T.quartz[t]]);lines.push(['Материал (ориентир)',600]);per+=600;}
+    if(state.cover==='cement'){per+=T.cement[t];lines.push(['Полимерцементный пол 7–30 мм, работа',T.cement[t]]);lines.push(['Материал (ориентир)',700]);per+=700;}
+    if(state.cover==='polish'){per+=T.grind200[t]+T.pu[t];lines.push(['Шлифовка до 200 грит',T.grind200[t]]);lines.push(['ПУ-пропитка глянцевая, с материалом',T.pu[t]]);}
+    if(state.cover==='impreg'){per+=T.grind50[t]+T.lith[t];lines.push(['Шлифовка до 50 грит',T.grind50[t]]);lines.push(['Литиевая пропитка, без материала',T.lith[t]]);}
+    if(state.cover==='deco'){per+=T.deco[t];lines.push(['Декоративный пол под мрамор, с материалом',T.deco[t]]);}
+    if(state.base==='dust'&&state.cover!=='polish'&&state.cover!=='impreg'){per+=T.grind50[t];lines.push(['Подготовка: шлифовка пылящего бетона',T.grind50[t]]);}
+    if(state.base==='crack'){per+=T.putty[t];lines.push(['Ремонт: полимерная шпатлёвка трещин',T.putty[t]]);}
+    if(state.obj==='автомойка'){per=Math.round(per*1.1);lines.push(['Автомойка: уклоны, химстойкость (+10 %)',0]);}
+    document.getElementById('resPer').textContent='от '+fmt(per)+' ₽/м²';
+    document.getElementById('resSum').textContent='итого от '+fmt(per*a)+' ₽ за '+fmt(a)+' м²';
+    document.getElementById('resLines').innerHTML=lines.map(l=>`<div><span>${l[0]}</span><b>${l[1]?fmt(l[1])+' ₽':''}</b></div>`).join('');
+    document.querySelectorAll('#priceTbl th,#priceTbl td').forEach(x=>x.classList.remove('hl'));
+    document.querySelectorAll('#priceTbl tr').forEach(r=>{const cell=r.children[t+1];if(cell)cell.classList.add('hl');});
+    /* testo del preventivo per WhatsApp, Telegram e form */
+    const pick=id=>{const s=document.querySelector('#'+id+' [aria-pressed="true"]').textContent;return s[0].toLowerCase()+s.slice(1);};
+    state.text='Здравствуйте! Расчёт с сайта: '+state.obj+', '+fmt(a)+' м², покрытие — '+pick('cover')+', основание — '+pick('base')+
+      '. Ориентир: от '+fmt(per)+' ₽/м², итого от '+fmt(per*a)+' ₽. Хочу точную смету.';
+    document.getElementById('calcWa').href='https://wa.me/79186829187?text='+encodeURIComponent(state.text);
+  }
+  /* Telegram non accetta testo precompilato: lo copiamo e apriamo la chat */
+  const tg=document.getElementById('calcTg');
+  tg.addEventListener('click',()=>{if(!navigator.clipboard)return;navigator.clipboard.writeText(state.text).then(()=>{
+    const s=tg.querySelector('span');s.textContent='Расчёт скопирован — вставьте в чат';setTimeout(()=>s.textContent='В Telegram',4000);}).catch(()=>{});});
+  let auto='';
+  document.getElementById('calcLead').addEventListener('click',()=>{
+    const o=document.getElementById('fObj'),m=document.getElementById('fMsg');
+    if(!o.value||o.value===auto){auto=state.obj[0].toUpperCase()+state.obj.slice(1)+', '+fmt(state.area)+' м²';o.value=auto;}
+    if(!m.value||m.dataset.auto===m.value){m.value=state.text;m.dataset.auto=m.value;}
+  });
+  document.querySelectorAll('[data-disc]').forEach(b=>b.textContent='−'+Math.round((1-turnkey(+b.dataset.disc)/turnkey(0))*100)+' %');
+  function group(id,key){document.getElementById(id).addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;
+    e.currentTarget.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');state[key]=b.dataset.v;calc();});}
+  group('objType','obj');group('cover','cover');group('base','base');
+  const rg=document.getElementById('areaRange'),nm=document.getElementById('area');
+  rg.addEventListener('input',()=>{state.area=+rg.value;nm.value=rg.value;calc();});
+  nm.addEventListener('input',()=>{const v=Math.max(20,Math.min(20000,+nm.value||20));state.area=v;rg.value=Math.min(3000,v);calc();});
+  calc();
+})();
+
+/* ---------- Before/after sliders ---------- */
+document.querySelectorAll('.ba').forEach(el=>{
+  const name=el.closest('.case').querySelector('b').textContent;
+  el.tabIndex=0;el.setAttribute('role','slider');el.setAttribute('aria-label','Было / стало: '+name);
+  el.setAttribute('aria-valuemin','3');el.setAttribute('aria-valuemax','97');
+  const pos=v=>{v=Math.round(Math.max(3,Math.min(97,v)));el.style.setProperty('--x',v+'%');el.setAttribute('aria-valuenow',v);el.setAttribute('aria-valuetext','было '+v+' %, стало '+(100-v)+' %');};
+  const set=x=>{const r=el.getBoundingClientRect();pos((x-r.left)/r.width*100);};
+  pos(50);
+  el.addEventListener('keydown',e=>{const v=+el.getAttribute('aria-valuenow');
+    const k={ArrowLeft:v-5,ArrowDown:v-5,ArrowRight:v+5,ArrowUp:v+5,Home:3,End:97}[e.key];
+    if(k!==undefined){e.preventDefault();pos(k);}});
+  let down=false;
+  el.addEventListener('pointerdown',e=>{down=true;el.setPointerCapture(e.pointerId);set(e.clientX);});
+  el.addEventListener('pointermove',e=>{if(down)set(e.clientX);});
+  el.addEventListener('pointerup',()=>down=false);el.addEventListener('pointercancel',()=>down=false);
+});
+
+/* ---------- Mobile menu ---------- */
+(function(){
+  const b=document.querySelector('.burger'),m=document.getElementById('menu');
+  const set=o=>{m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);};
+  b.addEventListener('click',()=>set(!m.classList.contains('open')));
+  m.addEventListener('click',e=>{if(e.target.closest('a'))set(false);});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('open')){set(false);b.focus();}});
+})();
+
+/* ---------- Copy buttons ---------- */
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const v=b.dataset.copy;const done=()=>{const o=b.textContent;b.textContent='Скопировано';setTimeout(()=>b.textContent=o,1500);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(done).catch(()=>{const s=getSelection(),r=document.createRange();r.selectNodeContents(b.parentNode);s.removeAllRanges();s.addRange(r);});}
+}));
+
+/* ---------- Form ---------- */
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();const err=document.getElementById('errMsg');err.textContent='';
+  const name=document.getElementById('fName').value.trim(),ph=document.getElementById('fPhone').value.trim();
+  if(!name||ph.replace(/\D/g,'').length<10){err.textContent='Укажите имя и телефон, чтобы мы могли перезвонить.';return;}
+  if(!document.getElementById('c1').checked||!document.getElementById('c2').checked){err.textContent='Нужно отметить оба согласия: без них заявку принимать нельзя (152-ФЗ).';return;}
+  document.getElementById('okMsg').classList.add('show');
+});
+
+/* ---------- Reveal on scroll ---------- */
+(function(){
+  const els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return;}
+  const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(e=>io.observe(e));
+})();
+</script>
+
+</body>
+</html>
